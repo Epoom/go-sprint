@@ -1,4 +1,4 @@
 #!/bin/bash
-filecount=$(ls -R | wc -l)
+filecount=$(tree | wc -l)
 multiply=$(($filecount * 5))
-printf '\t\v Total files * 5: %s\v\n' "$multiply"
+printf '\t\vTotal files * 5: %s\v\n' "$multiply"
