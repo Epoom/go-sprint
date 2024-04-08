@@ -1,4 +1,4 @@
 #!/bin/bash
-cat README
+cat /home/egert/sprint/theDirectory/left/down/beginning/README
 
-echo $PWD
+pwd
