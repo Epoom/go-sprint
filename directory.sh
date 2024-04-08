@@ -1,3 +1,4 @@
-cat
+#!/bin/bash
+cat README
 
-pwd
+echo $PWD
