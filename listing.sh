@@ -1,1 +1,1 @@
-ls -A -t -p --format=commas
+ls -t -p --format=commas --ignore=. --ignore=..
