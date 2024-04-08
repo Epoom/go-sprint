@@ -1,3 +1,2 @@
-cat README
-\n
-$pwd
+cat README \n
+$pwd \n
