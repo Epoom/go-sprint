@@ -1,12 +1,12 @@
 #!/bin/bash
 
 touch a
-touch !
+touch '!'
 touch "\\"
-touch \"
-mkdir \'
+touch "\""
+mkdir "\'"
 
-cp ! \'
+cp ! "\'"
 
 if [[ $MOVE_A == "yes" ]]; then
     mv a \'
