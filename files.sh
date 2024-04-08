@@ -8,8 +8,8 @@ mkdir "\`"
 
 cp ! "\`"
 
-if [[ $MOVE_A -eq "yes" ]]; then
+if [[ $MOVE_A == "yes" ]]; then
     mv a "\`"
-elif [[ $MOVE_A -eq "no" ]]; then
+elif [[ $MOVE_A == "no" ]]; then
     rm a
 fi
