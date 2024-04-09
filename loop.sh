@@ -1,11 +1,13 @@
 #!/bin/bash
 
-number=$1
+loopcount=$1
 
-if  (( number > 100 )) ; then
+if  [[ $loopcount -gt 100 ]] ; then
     number=100
+else 
+    number=$loopcount
 fi
 
-for (( a=1; a<=number; a++)) ; do
-    echo "$number times I've printed egertyakopoom"
+for ((i=1; i<=$number; i++)) ; do
+    echo "$i times I've printed egertyakopoom"
 done
