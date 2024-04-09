@@ -1,9 +1,8 @@
 package sprint
 
-
+import "math"
 
 func Casting(n float64) int {
-	
-	y := int(n)
-	return y
+	x := math.Round(n)
+	return int(x)
 }
