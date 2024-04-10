@@ -12,6 +12,6 @@ func CountDivisible(from, to, step, divisor int) int {
 		if i % divisor == 0 {
 			count = count + 1
 		}
-		return count
 	} 
+	return count
 }
