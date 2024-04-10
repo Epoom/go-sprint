@@ -8,7 +8,7 @@ func CountDivisible(from, to, step, divisor int) int {
 		return 0
 	}
 	count := 0
-	for i := from ; i < to; i =+ step {
+	for i := from ; i < to; i += step {
 		if i % divisor == 0 {
 			count = count + 1
 		}
