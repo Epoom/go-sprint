@@ -14,7 +14,7 @@ func StrToInt(s string) int {
 		}
 		i++
 	}
-	for s[i] >= '0' || s[i] <= '9' {
+	for s[i] >= '0' && s[i] <= '9' {
 		nb = (nb * 10) + (int(s[i] - '0'))
 		i++
 	}
