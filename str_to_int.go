@@ -8,6 +8,9 @@ func StrToInt(s string) int {
 	if len(s) == 0 || s[i] == ' ' {
 		return 0
 	}
+	if s[i] == '-' && s[i] +1 == '-' || s[i] == '+' && s[i] +1 == '+' {
+		return 0
+	}
 	for s[i] == '-' || s[i] == '+' {
 		if s[i] == '-' {
 			x *= -1
