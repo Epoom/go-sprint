@@ -1,15 +1,13 @@
 package sprint
 
-import (
-	"strconv"
-)
+
 
 func Countdown(n int) string {
 	str := ""
 	for i := n; i > 0; i -= 2 {
-		str += strconv.Itoa(i) + ", "
+		str += string('0' + byte(i)) + ", "
 	}
 	newstr := ""
 	newstr = str + "0!"
-	return string(newstr)
+	return newstr
 }
