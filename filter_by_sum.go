@@ -13,6 +13,9 @@ if sum >= limit {
 	newarr = append(newarr, subarr)
 }
 }
+if newarr == nil {
+	newarr = [][]int{}
+}
 return newarr
 }
 
