@@ -3,34 +3,28 @@ package sprint /*main*/
 /*import "fmt"*/
 
 func RemoveElementsInRange(arr []float64, from, to int) []float64 {
+	length := len(arr)
+
+
+		for from < 0 {
+			from += length
+		}
+		for to < 0 {
+			to += length
+		}
+
+		if from >= length {
+			from -= length
+		}
+		if to >= lenght {
+			to -= length
+		}
 	
-	if from < 0 {
-        from += len(arr)
-    }
-    if to < 0 {
-        to += len(arr)
-    }
-	
-	for from < 0 || from > len(arr) {
-		if from < 0 {
-			from += len(arr)
-		}
-		if from > len(arr) {
-			from -= len(arr)
-		}
-	}
-	for to < 0 || to > len(arr) {
-		if to < 0 {
-			to += len(arr)
-		}
-		if to > len(arr) {
-			to -= len(arr)
-		}
-	}
 	if from > to {
 		from, to = to, from
 	}
 	result := append(arr[:from], arr[to:]...)
+	
 	if len(result) == 0 {
 		return []float64{}
 	}
