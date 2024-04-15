@@ -4,11 +4,11 @@ package sprint /*main*/
 
 func RemoveElementsInRange(arr []float64, from, to int) []float64 {
 	
-	if from < 0 {
+	for from < 0 {
 		from += len(arr)
 	}
 	from = from % len(arr)
-	if to < 0 {
+	for to < 0 {
 		to += len(arr)
 	}
 
