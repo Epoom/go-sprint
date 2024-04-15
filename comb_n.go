@@ -1,4 +1,4 @@
-package main
+package sprint
 
 import "fmt"
 
@@ -127,9 +127,9 @@ func CombN(n int) []string {
 	return str
 }
 
-func main() {
+/*func main() {
 	combinations := CombN(9)
 
 	fmt.Println("Array of Combinations:")
 	fmt.Println(combinations)
-}
+}*/
