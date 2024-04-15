@@ -22,12 +22,12 @@ func RemoveElementsInRange(arr []float64, from, to int) []float64 {
 	if from > to {
 		from, to = to, from
 	}
-	result:= append(arr[:from], arr[to:]...)
-	if len(result) == 0 {
+	arr = append(arr[:from], arr[to:]...)
+	if len(arr) == 0 {
 		return []float64{}
 	}
 
-	return result
+	return arr
 }
 
 /*func main() {
