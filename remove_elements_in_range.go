@@ -4,29 +4,25 @@ package sprint /*main*/
 
 func RemoveElementsInRange(arr []float64, from, to int) []float64 {
 	
-	for from < 0 || from > len(arr) {
-		if from < 0 {
-			from += len(arr)
-		}
-		if from > len(arr) {
-			from -= len(arr)
-		}
+	if from < 0 {
+		from += len(arr)
 	}
-	for to < 0 || to > len(arr) {
-		if to < 0 {
-			to += len(arr)
-		}
-		if to > len(arr) {
-			to -= len(arr)
-		}
+	if to < 0 {
+		to += len(arr)
 	}
+
+	if from < 0 {
+		from = 0
+	}
+	if to >= len(arr) {
+		to = len(arr) - 1
+	}
+
 	if from > to {
-		from, to = to, from
+		from, to =  to, from
 	}
-	result := append(arr[:from], arr[to:]...)
-	if len(result) == 0 {
-		return []float64{}
-	}
+
+	result := append(arr[:from], arr[to+1:]...)
 
 	return result
 }
