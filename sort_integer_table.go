@@ -1,6 +1,6 @@
-package main
+package sprint /*main*/
 
-import "fmt"
+/*import "fmt"*/
 
 func SortIntegerTable(table []int) []int {
 
@@ -15,10 +15,10 @@ func SortIntegerTable(table []int) []int {
 	return table
 }
 
-func main() {
+/*func main() {
     numbers := []int{5, 4, 3, 2, 1, 0}
      
     SortIntegerTable(numbers)
     
     fmt.Println(numbers)
-}
+}*/
