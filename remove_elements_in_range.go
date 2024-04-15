@@ -3,7 +3,7 @@ package sprint /*main*/
 /*import "fmt"*/
 
 func RemoveElementsInRange(arr []float64, from, to int) []float64 {
-	/*yo*/
+	
 	for from < 0 || from > len(arr) {
 		if from < 0 {
 			from += len(arr)
