@@ -1,9 +1,8 @@
 package sprint
 
 func NRune(s string, i int) rune {
-var joint rune
-for  c := 0; c < i; c++ {
-	joint = rune(c)
+if i >= 0 && i < len(s) {
+return []rune(s)[i]
 }
-return joint
+return 0
 }
