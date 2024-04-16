@@ -2,11 +2,11 @@ package sprint
 
 func ToUpperCase(s string) string {
 	var str string
-	for i := 0; i < len(s); i++ {
-		if i >= 'a' && i <= 'z' {
-			str += string(i - 32)
+	for _, c := range s {
+		if c >= 'a' && c <= 'z' {
+			str += string(c - 32)
 		} else {
-		str += string(i)
+			str += string(c)
 		}
 	}
 	return str
