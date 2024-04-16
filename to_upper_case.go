@@ -3,10 +3,11 @@ package sprint
 func ToUpperCase(s string) string {
 	var str string
 	for i := 0; i < len(s); i++ {
-		if s[i] > 97 || s[i] < 122 {
-			str = str + string(rune(s[i] - 32))
+		if i >= 97 && i <= 122 {
+			str = str + string(rune(i - 32))
+		} else {
+		str = str + string(i)
 		}
-		str = str + string(rune(s[i]))
 	}
 	return str
 }
