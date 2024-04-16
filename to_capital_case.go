@@ -21,7 +21,10 @@ for _, i := range s {
 			} else {
 				str += string(i)
 			}
-		}
+		} 
+	} else if i >= '0' && i <= '9' {
+		str += string(i)
+		capitalize = false
 	} else {
 		str += string(i)
 		capitalize = true
