@@ -1,25 +1,38 @@
 package sprint
 
+/*import "fmt"*/
+
 func ToCapitalCase(s string) string {
-count := 0
+capitalize := true
 var str string
-for  i := 0; i <= len(s); i++ {
-	count++
-	if count > 1 {
-		if i >= 'A' && i <= 'Z' {
-			str += string(i + 32)
-			}
-		}
+
+for _, i := range s {
+	if i < 'A' || i > 'z' || (i < 0 && i > 9) {
+		capitalize = true
 		str += string(i)
-	if count == 1 {
-		if i >= 'a' && i <= 'z' {
+	} else if i >= 'A' && i <= 'Z' {
+		if !capitalize {
+			str += string(i + 32) 
+		} else {
+			str += string(i)
+		}
+	} else if i >= 'a' && i <= 'z' {
+		if capitalize {
 			str += string(i - 32)
+		} else {
+			str += string(i)
 		}
+		capitalize = false
+	} else {
 		str += string(i)
 	}
-	if i == ' ' {
-		count = 0
-	}
 }
-	return str
+return str
 }
+
+
+
+/*func main() {
+	str := "Hello! How are you? How+are+things+4you?"
+	fmt.Println(ToCapitalCase(str))
+}*/
