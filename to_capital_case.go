@@ -20,7 +20,7 @@ for _, i := range s {
 			str += string(i)
 		}
 		capitalize = false
-	} else if i < 'A' || i > 'z' || (i < 0 && i > 9) {
+	} else if (i < 'A' || i > 'z' || (i < '0' && i > '9')) {
 		capitalize = true
 		str += string(i)
 	} else {
