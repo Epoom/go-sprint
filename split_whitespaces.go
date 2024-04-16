@@ -17,5 +17,8 @@ for _, c := range s {
 if current != "" {
 	words = append(words, current)
 }
+if len(words) == 0 {
+	return words
+}
 return words
 }
