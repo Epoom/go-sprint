@@ -3,23 +3,23 @@ package sprint
 func ToCapitalCase(s string) string {
 count := 0
 var str string
-for _, i := len(s) {
+for  i := 0; i <= len(s); i++ {
 	count++
 	if count > 1 {
 		if i >= 'A' && i <= 'Z' {
-			str += string(c + 32)
+			str += string(i + 32)
 			}
 		}
-		str += string(c)
-	}
+		str += string(i)
 	if count == 1 {
 		if i >= 'a' && i <= 'z' {
-			str += string(c - 32)
+			str += string(i - 32)
 		}
-		str += string(c)
+		str += string(i)
 	}
-	if i == " " {
+	if i == ' ' {
 		count = 0
 	}
+}
 	return str
 }
