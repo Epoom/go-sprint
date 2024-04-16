@@ -8,6 +8,7 @@ func ToUpperCase(s string) string {
 			c -= 32
 			str = str + string(rune(c))
 		}
+		str = str + string(rune(c))
 	}
 	return str
 }
