@@ -1,7 +1,6 @@
-package main
+package sprint
 
 import (
-	"fmt"
 	"strings"
 	"math"
 )
@@ -32,9 +31,9 @@ func ConvertAnyToAny(nbr, baseFrom, baseTo string) string {
 return resStr
 }
 
-func main() {
+/*func main() {
 fmt.Println(ConvertAnyToAny("101011", "01", "0123456789"))
-}
+}*/
 /*Create a Go function that takes three string arguments: nbr representing a numeric value in a specific base baseFrom, 
 and baseTo representing the desired base for the returned value. 
 The function should convert the nbr from baseFrom to baseTo and return the result as a string.*/
