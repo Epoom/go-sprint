@@ -9,15 +9,16 @@ var modulo int
 thing := make(map[rune]bool)
 
 for _, c := range base {
+	if rune(c) == '+' || rune(c) == '-' {
+		return "NV"
+	}
+	
 	if thing[c] {
 		return "NV"
 	}
 	thing[c] = true
 }
 
-if rune(base[0]) == '+' || base[0] == '-' {
-	return "NV"
-}
 if len(base) < 2 {
 	return "NV"
 }
