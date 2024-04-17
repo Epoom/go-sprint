@@ -28,12 +28,15 @@ func ConvertAnyToAny(nbr, baseFrom, baseTo string) string {
 		resStr.WriteString(string(baseTo[digit]))
 		result /= len(baseTo)
 	}
-
+	// Reverse the string
 	runes := []rune(resStr.String())
 	for i, j := 0, len(runes)-1; i < j; {
 			runes[i], runes[j] = runes[j], runes[i]
 			i++
 			j--
+		}
+		if string(runes) == "1" {
+			return string("0")
 		}
 
 return string(runes)
