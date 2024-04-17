@@ -1,10 +1,10 @@
-package main
+package sprint
 
-import (
+/*import (
 	"fmt"
 	"math"
 	"strings"
-)
+)*/
 
 func ConvertAnyToDec(s string, base string) int {
 	
@@ -29,13 +29,13 @@ func ConvertAnyToDec(s string, base string) int {
 return result
 }
 
-func main() {
+/*func main() {
 fmt.Println(ConvertAnyToDec("125", "0123456789")) // should output 125
 fmt.Println(ConvertAnyToDec("1111101", "01")) // should output 125
 fmt.Println(ConvertAnyToDec("7D", "0123456789ABCDEF")) // should output 125
 fmt.Println(ConvertAnyToDec("uoi", "choumi")) // should output 125
 fmt.Println(ConvertAnyToDec("bbbbbab", "-ab")) // should output 0
-}
+}*/
 
 /*Create a Go function that takes two parameters:
 
