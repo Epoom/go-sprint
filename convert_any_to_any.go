@@ -20,7 +20,7 @@ func ConvertAnyToAny(nbr, baseFrom, baseTo string) string {
 		if charValue >= len(baseFrom) {
 			return ""
 		}
-		result = result * len(baseFrom) + charValue
+		result += charValue * int(math.Pow(float64(len(baseFrom)), float64(len(nbr)-1-i)))
 	}
 	var resStr strings.Builder
 	for result > 0 {
