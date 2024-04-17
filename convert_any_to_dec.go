@@ -1,10 +1,9 @@
 package sprint
 
-/*import (
-	"fmt"
+import (
 	"math"
 	"strings"
-)*/
+)
 
 func ConvertAnyToDec(s string, base string) int {
 	
