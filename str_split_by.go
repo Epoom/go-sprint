@@ -17,7 +17,7 @@ func StrSplitBy(s, sep string) []string {
 		words = append(words, s[start:])
 	}
 	if len(words) == 0 {
-		return words
+		return []string{}
 	}
 	return words
 }
