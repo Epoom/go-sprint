@@ -20,15 +20,23 @@ func ConvertAnyToAny(nbr, baseFrom, baseTo string) string {
 		if charValue >= len(baseFrom) {
 			return ""
 		}
-		result += charValue * int(math.Pow(float64(len(baseFrom)), float64(len(nbr)-1-i)))
+		result = result * len(baseFrom) + charValue
 	}
-	var resStr string
+	var resStr strings.Builder
 	for result > 0 {
-		digit := result % 10
-		resStr = string(digit + '0') + resStr
-		result /= 10
+		digit := result % len(baseTo)
+		resStr.WriteString(string(baseTo[digit]))
+		result /= len(baseTo)
 	}
-return resStr
+
+	runes := []rune(resStr.String())
+	for i, j := 0, len(runes)-1; i < j; {
+			runes[i], runes[j] = runes[j], runes[i]
+			i++
+			j--
+		}
+
+return string(runes)
 }
 
 /*func main() {
