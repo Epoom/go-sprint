@@ -8,6 +8,6 @@ type Point struct {
 
 func MakePoint(x, y float32, text string) Point {
 
-	return Point{x: x, y: y, text: text}
+	return Point{}
 
 }
