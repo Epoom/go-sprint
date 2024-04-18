@@ -1,13 +1,13 @@
 package sprint
 
 type Point struct {
-	x float32
-	y float32
-	text string
+	X float32
+	Y float32
+	Text string
 }
 
 func MakePoint(x, y float32, text string) Point {
 
-	return Point{}
+	return Point{X: x, Y: y, Text: text}
 
 }
