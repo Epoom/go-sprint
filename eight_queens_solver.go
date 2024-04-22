@@ -13,7 +13,7 @@ func EightQueensSolver() string {
 	var solve func(int, int, []int, *[]string, string)
 
 	solve = func(n, col int, board []int, solutions *[]string, currentSolution string) {
-		if col == 0 {
+		if col == n {
 			*solutions = append(*solutions, currentSolution)
 		return
 		}
