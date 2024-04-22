@@ -5,12 +5,11 @@ func NextPrime(n int) int {
 	if n < 2 {
 		return 2
 	}
-	if IsPrime(n)
-	{
+	if IsPrime(n) {
 		return n
 	}
-	next = n + 1
-	for !NextPrime(next) {
+	next := n + 1
+	for NextPrime(next) != 0 {
 		n++
 	}
 	return next
