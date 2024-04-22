@@ -10,22 +10,25 @@ func EightQueensSolver() string {
 	n := 8
 	board := make([]int, n)
 	solutions := []string{}
-	var solve func(int, int, []int, *[]string, string)
+	var solve func(int)
 
-	solve = func(n, col int, board []int, solutions *[]string, currentSolution string) {
+	solve = func(col int) {
 		if col == n {
-			*solutions = append(*solutions, currentSolution)
-		return
+			var solution strings.Builder
+			for _, row := range board {
+				solution.WriteString(strconv.Itoa(row + 1))
+			}
+			solutions = append(solutions, solution.String())
+			return
 		}
 		for row := 0; row < n; row++ {
 			if isSafe(board, row, col) {
 				board[col] = row
-				newSolution := currentSolution + strconv.Itoa(row+1)
-				solve(n, col+1, board, solutions, newSolution)
+				solve(col + 1)
 			}
 		}
 	}
-	solve(n, 0, board, &solutions, "")
+	solve(0)
 
 	solutionsStr := strings.Join(solutions, "\n")
 	return solutionsStr
