@@ -9,8 +9,8 @@ func NextPrime(n int) int {
 		return n
 	}
 	next := n + 1
-	for NextPrime(next) != 0 {
-		n++
+	for NextPrime(next) == 0 {
+		next++
 	}
 	return next
 }
