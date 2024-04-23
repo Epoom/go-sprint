@@ -2,11 +2,12 @@ package sprint
 
 func IsSorted(f func(a, b string) int, arr []string) bool {
 	n := len(arr)
-	for i := 0; i < n-1; i++ {
-		if f(arr[i], arr[i+1]) > 0 {
-			return false
-		}
-	}
+    for i := 0; i < n-1; i++ {
+        result := f(arr[i], arr[i+1])
+        if result < 0 {
+            return false
+        }
+    }
 	return true
 }
 
