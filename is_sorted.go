@@ -7,6 +7,9 @@ func IsSorted(f func(a, b string) int, arr []string) bool {
         if result > 0 {
             return false
         }
+		if result < 0 {
+			return false
+		}
     }
 	return true
 }
