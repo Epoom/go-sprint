@@ -2,7 +2,7 @@ package sprint
 
 func ArrMap(f func(int) bool, a []int) []bool {
  result := make([]bool, len(a))
- for i, val := range a {
+ for i, val := range arr {
 	result[i] = f(val)
  }
  return result
@@ -10,7 +10,8 @@ func ArrMap(f func(int) bool, a []int) []bool {
 
 func IsNegative(n int) bool {
 	
-	if n < 0 {	
+	if n < 0 {
+		return  true
 	}
 	return bool(false)
 }
