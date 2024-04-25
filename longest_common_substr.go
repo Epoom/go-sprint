@@ -4,7 +4,7 @@ func LongestCommonSubstr(str1, str2 string) string {
 	var longest string
 	var maxLength int
 
-	for i := o; i < len(str1); i++ {
+	for i := 0; i < len(str1); i++ {
 		for j := 0; j < len(str2); j++ {
 			length := 0
 			for k := 0; i+k < len(str1) && j+k < len(str2); k++ {
