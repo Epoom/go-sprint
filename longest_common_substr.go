@@ -2,7 +2,7 @@ package sprint
 
 func LongestCommonSubstr(str1, str2 string) string {
 	var longest string
-	vat maxLength intconst
+	var maxLength int
 
 	for i := o; i < len(str1); i++ {
 		for j := 0; j < len(str2); j++ {
