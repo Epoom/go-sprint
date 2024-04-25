@@ -14,7 +14,7 @@ func BalancedParentheses(input string) bool {
 			case '(', '{', '[':
 				stack = append(stack, c)
 			case ')', '}', ']':
-				if len(stack) == 0 || stack[len(stack)-1] != parentheses[char] {
+				if len(stack) == 0 || stack[len(stack)-1] != parentheses[c] {
 					return false
 				}
 				stack = stack[:len(stack)-1]
